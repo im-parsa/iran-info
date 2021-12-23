@@ -1,0 +1,54 @@
+{
+  "name": "iran-info",
+  "version": "0.2.0",
+  "description": "Get information about cities and provinces of Iran",
+  "homepage": "https://github.com/im-parsa/iran-info#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/im-parsa/iran-info.git"
+  },
+  "bugs": {
+    "url": "https://github.com/im-parsa/iran-info/issues"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
+  },
+  "keywords": [
+    "npm",
+    "api",
+    "node.js",
+    "node",
+    "nodejs",
+    "node js",
+    "iran",
+    "city",
+    "cities",
+    "iran city",
+    "iran cities",
+    "iran-cities",
+    "province",
+    "provinces",
+    "iran province",
+    "iran provinces",
+    "iran-provinces"
+  ],
+  "author": {
+    "name": "im-parsa",
+    "email": "parsa.firoozi20@gmail.com",
+    "url": "https://parsa-firoozi.ir/"
+  },
+  "devDependencies": {
+    "codecov": "^3.1.0",
+    "prettier": "^1.13.2",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "typescript": "^2.8.3"
+  }
+}
