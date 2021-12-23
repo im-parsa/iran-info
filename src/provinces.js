@@ -3,21 +3,27 @@
 const data = require('./data/provinces.json');
 const dataC = require('./data/cities.json');
 
-module.exports = class Provinces {
-  constructor(name) {
+module.exports = class Provinces
+{
+  constructor(name)
+  {
     this.name = name;
   }
 
-  list() {
-    if (this.name) {
+  list()
+  {
+    if (this.name)
+    {
       return new Error("Please, don't fill name in this function when you want get a list");
     }
 
     return data;
   }
 
-  cities() {
-    if (!this.name) {
+  cities()
+  {
+    if (!this.name)
+    {
       return new Error('Please, fill name in this function when you want get a list');
     }
 
@@ -25,8 +31,10 @@ module.exports = class Provinces {
     return dataC.filter(city => city.province_id === this.province[0].id);
   }
 
-  find() {
-    if (!this.name) {
+  find()
+  {
+    if (!this.name)
+    {
       return new Error('Please, fill name in this function when you want get a list');
     }
 

@@ -1,24 +1,30 @@
 import data from './data/provinces.json';
 import dataC from './data/cities.json';
 
-export class Provinces {
+export class Provinces
+{
   private readonly name: string;
   private province: any;
 
-  constructor(name: string) {
+  constructor(name: string)
+  {
     this.name = name;
   }
 
-  list() {
-    if (this.name) {
+  list()
+  {
+    if (this.name)
+    {
       return new Error("Please, don't fill name in this function when you want get a list");
     }
 
     return data;
   }
 
-  cities() {
-    if (!this.name) {
+  cities()
+  {
+    if (!this.name)
+    {
       return new Error('Please, fill name in this function when you want get a list');
     }
 
@@ -26,8 +32,10 @@ export class Provinces {
     return dataC.filter(city => city.province_id === this.province[0].id);
   }
 
-  find() {
-    if (!this.name) {
+  find()
+  {
+    if (!this.name)
+    {
       return new Error('Please, fill name in this function when you want get a list');
     }
 
