@@ -39,11 +39,10 @@
     "iran provinces",
     "iran-provinces"
   ],
-  "author": {
-    "name": "im-parsa",
-    "email": "parsa.firoozi20@gmail.com",
-    "url": "https://parsa-firoozi.ir/"
+  "publishConfig": {
+    "@im-parsa:registry": "https://npm.pkg.github.com"
   },
+  "author": "im-parsa <parsa.firoozi20@gmail.com> (https://parsa-firoozi.ir/)",
   "devDependencies": {
     "codecov": "^3.1.0",
     "prettier": "^1.13.2",
