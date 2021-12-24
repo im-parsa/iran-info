@@ -31,7 +31,7 @@ new Cities().search("ش");
 new Provinces().list();
 
 // @Find provinces with their names
-new Provinces().find("فارش");
+new Provinces().find("فارس");
 
 // @Search with keyword in all provinces of the Iran
 new Provinces().search("ف");
