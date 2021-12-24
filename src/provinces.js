@@ -31,6 +31,16 @@ module.exports = class Provinces
     return dataC.filter(city => city.province_id === this.province[0].id);
   }
 
+  search()
+  {
+    if (!this.name)
+    {
+      return new Error('Please, fill keyword in this function when you want get a list');
+    }
+
+    return data.filter(province => province.name.includes(this.name));
+  }
+
   find()
   {
     if (!this.name)
@@ -38,6 +48,6 @@ module.exports = class Provinces
       return new Error('Please, fill name in this function when you want get a list');
     }
 
-    return data.filter(province => province.name.includes(this.name));
+    return data.filter(province => province.name === this.name);
   }
 };

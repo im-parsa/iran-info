@@ -19,6 +19,16 @@ module.exports = class Cities
     return data;
   }
 
+  search()
+  {
+    if (!this.name)
+    {
+      return new Error('Please, fill keyword hint in this function when you want get a list');
+    }
+
+    return data.filter(city => city.name.includes(this.name));
+  }
+
   find()
   {
     if (!this.name)

@@ -1,5 +1,5 @@
-import data from './data/provinces.json';
 import dataC from './data/cities.json';
+import data from './data/provinces.json';
 
 export class Provinces
 {
@@ -11,7 +11,7 @@ export class Provinces
     this.name = name;
   }
 
-  list()
+  public list()
   {
     if (this.name)
     {
@@ -21,7 +21,7 @@ export class Provinces
     return data;
   }
 
-  cities()
+  public cities()
   {
     if (!this.name)
     {
@@ -32,13 +32,23 @@ export class Provinces
     return dataC.filter(city => city.province_id === this.province[0].id);
   }
 
-  find()
+  public search()
+  {
+    if (!this.name)
+    {
+      return new Error('Please, fill keyword in this function when you want get a list');
+    }
+
+    return data.filter(province => province.name.includes(this.name));
+  }
+
+  public find()
   {
     if (!this.name)
     {
       return new Error('Please, fill name in this function when you want get a list');
     }
 
-    return data.filter(province => province.name.includes(this.name));
+    return data.filter(province => province.name === this.name);
   }
 }

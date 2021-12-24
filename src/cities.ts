@@ -9,7 +9,7 @@ export class Cities
     this.name = name;
   }
 
-  list()
+  public list()
   {
     if (this.name)
     {
@@ -19,13 +19,23 @@ export class Cities
     return data;
   }
 
-  find()
+  public search()
+  {
+    if (!this.name)
+    {
+      return new Error('Please, fill keyword hint in this function when you want get a list');
+    }
+
+    return data.filter(city => city.name.includes(this.name));
+  }
+
+  public find()
   {
     if (!this.name)
     {
       return new Error('Please, fill name hint in this function when you want get a list');
     }
 
-    return data.filter(city => city.name.includes(this.name));
+    return data.filter(city => city.name === this.name);
   }
 }
